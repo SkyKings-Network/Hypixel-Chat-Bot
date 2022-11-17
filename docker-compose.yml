@@ -1,0 +1,23 @@
+version: '3'
+services:
+  bridge:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: senither/hypixel-discord-chat-bridge
+    environment:
+      SERVER_HOST: mc.hypixel.net
+      SERVER_PORT: 25565
+      MINECRAFT_USERNAME: yourUsername
+      MINECRAFT_PASSWORD: yourPassword
+      MINECRAFT_LOBBY_HOLDER: lobbyHolder
+      MINECRAFT_ACCOUNT_TYPE: mojang
+      DISCORD_TOKEN: yourDiscordToken
+      DISCORD_CHANNEL: discordChannelId
+      DISCORD_COMMAND_ROLE: discordCommandRoleId
+      DISCORD_OWNER_ID: discordOwnerId
+      MESSAGE_MODE: bot
+      EXPRESS_ENABLED: false
+      EXPRESS_PORT: 8880
+      EXPRESS_AUTHORIZATION: authorizationHeaderString
