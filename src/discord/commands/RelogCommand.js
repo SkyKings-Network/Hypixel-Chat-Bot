@@ -11,7 +11,7 @@ class RelogCommand extends DiscordCommand {
   }
 
   onCommand(message) {
-    process.exit();
+    setTimeout(() => {process.exit();}, 10000);
   }
 
   relogWithDelay(message, delay = 0) {

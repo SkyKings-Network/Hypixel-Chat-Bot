@@ -1,9 +1,8 @@
 const EventHandler = require('../../contracts/EventHandler')
-
 class StateHandler extends EventHandler {
   constructor(minecraft, command) {
     super()
-
+    
     this.minecraft = minecraft
     this.command = command
   }
@@ -18,7 +17,7 @@ class StateHandler extends EventHandler {
 
   onMessage(event) {
     const message = event.toString().trim()
-
+    
     if (this.online===false) {
 
 
@@ -36,13 +35,13 @@ class StateHandler extends EventHandler {
       }
 
       if (this.isLoginMessage(message)) {
-        let user = message.split('>')[1].trim().split('joined.')[0].trim()
+        let user = message.split(" ")[2]
 
         return this.minecraft.broadcastPlayerToggle({ username: user, message: `joined.`, color: '47F049' })
       }
 
       if (this.isLogoutMessage(message)) {
-        let user = message.split('>')[1].trim().split('left.')[0].trim()
+        let user = message.split(" ")[2]
 
         return this.minecraft.broadcastPlayerToggle({ username: user, message: `left.`, color: 'F04947' })
       }
@@ -57,7 +56,7 @@ class StateHandler extends EventHandler {
           color: '47F049'
         })
       }
-
+      
       if (this.isOnlineMessage(message)) {
         this.online = true;
       }
@@ -191,11 +190,18 @@ class StateHandler extends EventHandler {
       }
 
       if (this.isJoinRequest(message)) {
+        const fs = require('fs');
+
+        let rawdata = fs.readFileSync('config.json');
+        let config = JSON.parse(rawdata);
+
         if (message.includes("[VIP]") || message.includes("[VIP+]") || message.includes("[MVP]") || message.includes("[MVP+]") || message.includes("[MVP++]")) {
           let user = message.split(' ')[1]
           user = user.replace('-----------------------------------------------------', '')
           user = user.replace('\n', '')
-          this.bot.chat(`/g accept ${user}`)
+          if (config.discord.autoAccept===true){
+            this.bot.chat(`/g accept ${user}`)
+          }
           return this.minecraft.broadcastCleanEmbed({ message: `${user} has requested to join the guild.`, color: '47F049' })
 
           
@@ -203,11 +209,13 @@ class StateHandler extends EventHandler {
           let user = message.split(' ')[0]
           user = user.replace('-----------------------------------------------------', '')
           user = user.replace('\n', '')
-          this.bot.chat(`/g accept ${user}`)
-          return this.minecraft.broadcastCleanEmbed({ message: `${user} has requested to join the guild.`, color: '47F049' })
+          if (config.discord.autoAccept===true){
+            this.bot.chat(`/g accept ${user}`)
+          }
 
-          
+          return this.minecraft.broadcastCleanEmbed({ message: `${user} has requested to join the guild.`, color: '47F049' })
         }
+
         
         
         
@@ -242,21 +250,18 @@ class StateHandler extends EventHandler {
         return
       }
 
-      else {
-        this.minecraft.broadcastMessage({
-          username: username,
-          message: playerMessage,
-          guildRank: guildRank,
-        })
-      }
+      this.minecraft.broadcastMessage({
+        username: username,
+        message: playerMessage,
+        guildRank: guildRank,
+      })
 
       
 
     } else {
-      console.log(this.onlineMsg);
       this.onlineMsg += message;
       this.onlineMsg += "\n";
-      if (message.includes("Offline Members:")) {
+      if (message.includes("Offline Members:") || message.includes("Miembros Desconectados:")) {
         this.online = false
         let embed = this.minecraft.broadcastHeadedEmbed({
           message: `${this.onlineMsg}`,
@@ -288,7 +293,7 @@ class StateHandler extends EventHandler {
   isOnlineMessage(message) {
     console.log(message);
 
-    return message.startsWith('Guild Name:')
+    return message.startsWith('Guild Name:') || message.startsWith('Nombre de la Guild:')
   }
 
   isGuildMessage(message) {
@@ -296,11 +301,11 @@ class StateHandler extends EventHandler {
   }
 
   isLoginMessage(message) {
-    return message.startsWith('Guild >') && message.endsWith('joined.') && !message.includes(':')
+    return (message.startsWith('Guild >') && message.endsWith('joined.') && !message.includes(':')) || (message.startsWith('Guild >') && message.endsWith('entró.') && !message.includes(':'))
   }
 
   isLogoutMessage(message) {
-    return message.startsWith('Guild >') && message.endsWith('left.') && !message.includes(':')
+    return message.startsWith('Guild >') && message.endsWith('left.') && !message.includes(':') || (message.startsWith('Guild >') && message.endsWith('salió.') && !message.includes(':'))
   }
 
   isJoinMessage(message) {
@@ -328,7 +333,7 @@ class StateHandler extends EventHandler {
   }
 
   isRepeatMessage(message) {
-    return message == 'You cannot say the same message twice!'
+    return message == 'You cannot say the same message twice!' || message == '¡No puedes decir el mismo mensaje dos veces!'
   }
 
   isNoPermission(message) {

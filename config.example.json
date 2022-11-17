@@ -16,7 +16,7 @@
     "ownerId": "ownerId",
     "prefix": "!",
     "messageMode": "bot",
-    "autoAccept": true,
+    "autoAccept": false,
     "weightRequirements": 0
   },
   "express": {

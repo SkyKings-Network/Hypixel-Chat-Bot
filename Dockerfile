@@ -26,6 +26,7 @@ WORKDIR /srv
 COPY package.json /srv/
 COPY yarn.lock /srv/
 RUN yarn install
+RUN npm install --save cross-fetch
 
 # Copy over the source code
 COPY src /srv/src/
