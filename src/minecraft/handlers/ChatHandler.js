@@ -73,6 +73,14 @@ class StateHandler extends EventHandler {
         })
       }
 
+      if (this.isNotificationMessage(message)) {
+        return this.minecraft.broadcastHeadedEmbed({
+          message: `${message}`,
+          title: `Guild Notifications`,
+          color: '47F049'
+        })
+      }
+
       if (this.isKickMessage(message)) {
         let user = message.replace(/\[(.*?)\]/g, '').trim().split(/ +/g)[0]
 
@@ -284,6 +292,10 @@ class StateHandler extends EventHandler {
 
   isLobbyJoinMessage(message) {
     return (message.endsWith(' the lobby!') || message.endsWith(' the lobby! <<<')) && message.includes('[MVP+')
+  }
+
+  isNotificationMessage(message) {
+    return (message.endsWith(' guild join/leave notifications!') || message.endsWith(' las notificaciones de entrar/salir!'))
   }
 
   isFullMessage(message) {
