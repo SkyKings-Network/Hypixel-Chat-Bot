@@ -30,7 +30,7 @@ class CommandHandler {
       return false
     }
 
-    if (command.name === 'online' || command.name === 'help') {
+    if (command.name === 'online' || command.name === 'help' || command.name === 'list') {
       command.onCommand(message)
       return true
     }

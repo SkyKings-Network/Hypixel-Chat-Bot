@@ -266,16 +266,14 @@ class StateHandler extends EventHandler {
         guildRank: guildRank,
       })
 
-      
-
     } else {
       this.onlineMsg += message;
       this.onlineMsg += "\n";
-      if (message.includes("Offline Members:") || message.includes("Miembros Desconectados:")) {
+      if (message.includes("Online Members:") || message.includes("Miembros en Línea:")) {
         this.online = false
         let embed = this.minecraft.broadcastHeadedEmbed({
           message: `${this.onlineMsg}`,
-          title: `Online Members`,
+          title: `Guild Members`,
           color: '47F049'
         });
         this.onlineMsg = "";
