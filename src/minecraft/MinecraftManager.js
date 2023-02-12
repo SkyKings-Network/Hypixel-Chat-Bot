@@ -18,25 +18,31 @@ class MinecraftManager extends CommunicationBridge {
 
   connect() {
     this.bot = this.createBotConnection()
-
     this.errorHandler.registerEvents(this.bot)
     this.stateHandler.registerEvents(this.bot)
     this.chatHandler.registerEvents(this.bot)
   }
 
   createBotConnection() {
-    return mineflayer.createBot({
+    const bot = mineflayer.createBot({
       host: this.app.config.server.host,
       port: this.app.config.server.port,
       username: this.app.config.minecraft.username,
       password: this.app.config.minecraft.password,
       version: false,
       auth: this.app.config.minecraft.accountType,
-    })
+    });
+
+
+    return bot
   }
 
   onBroadcast({ username, message, replyingTo }) {
     this.app.log.broadcast(`${username}: ${message}`, 'Minecraft')
+
+    // console.log(this.bot.chatPatterns);
+    // console.log(this.bot.addChatPattern("chat"));
+
 
     if (this.bot.player !== undefined) {
       this.bot.chat(`/gc ${replyingTo ? `${username} replying to ${replyingTo}:` : `${username}:`} ${message}`)

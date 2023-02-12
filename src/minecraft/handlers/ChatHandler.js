@@ -13,7 +13,9 @@ class StateHandler extends EventHandler {
     this.onlineMsg = ""
 
     this.bot.on('message', (...args) => this.onMessage(...args))
+
   }
+
 
   onMessage(event) {
     const message = event.toString().trim()

@@ -28,6 +28,7 @@ class Configuration {
       authorization: "authorizationHeaderString"
     }
   }
+  
 
   environmentOverrides = {
     SERVER_HOST: val => (this.properties.server.host = val),

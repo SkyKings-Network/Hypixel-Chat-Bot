@@ -12,6 +12,7 @@ class ExpressManager {
       return this.app.log.express('Express disabled in configuration, skipping initialization.')
     }
 
+
     this.router.post('/kick', this.kick.bind(this))
     this.router.post('/mute', this.mute.bind(this))
     this.router.post('/unmute', this.unMute.bind(this))
