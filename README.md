@@ -32,25 +32,42 @@ If you have a new Ubuntu server, you will only need to use these steps once. Onc
 ## Setting Up New Server (Commands)
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
 source ~/.bashrc
+
 nvm install 19.7.0
+
 npm install -g pm2
+
 apt install git
+
 git clone https://github.com/Jacktheguys/Hypixel-Chat-Bot
+
 mkdir bridges
+
 mkdir bridges/bridgebots
+
 cd hypixel-discord-chat-bridge/
+
 mv config.example.json config.json
+
 npm install -g yarn
+
 yarn
 
 ## Creating A New Bridge Bot ( RUN SETTING UP A NEW SERVER COMMANDS IF IT IS A FRESH SERVER )
 cd ~
+
 mkdir bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot
+
 cp -r hypixel-discord-chat-bridge/ bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot/
+
 cd bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot/hypixel-discord-chat-bridge
+
 nano config.json (edit this with correct info)
+
 pm2 start index.js --name NAMEOFBRIDGE-BridgeBot
+
 
 
 ### Commands
