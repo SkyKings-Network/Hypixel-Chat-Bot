@@ -60,9 +60,9 @@ cd ~
 
 mkdir bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot
 
-cp -r hypixel-discord-chat-bridge/ bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot/
+cp -r Hypixel-Chat-Bot/ bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot/
 
-cd bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot/hypixel-discord-chat-bridge
+cd bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot/Hypixel-Chat-Bot/
 
 nano config.json (edit this with correct info)
 
