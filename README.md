@@ -29,7 +29,7 @@ Once you have a fresh Ubuntu server, run these commands in order.
 If you have a new Ubuntu server, you will only need to use these steps once. Once you have done these starting commands, you can move onto the next steps.
 
 
-##Setting Up New Server (Commands)
+## Setting Up New Server (Commands)
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
@@ -44,7 +44,7 @@ mv config.example.json config.json
 npm install -g yarn
 yarn
 
-##Creating A New Bridge Bot ( RUN SETTING UP A NEW SERVER COMMANDS IF IT IS A FRESH SERVER )
+## Creating A New Bridge Bot ( RUN SETTING UP A NEW SERVER COMMANDS IF IT IS A FRESH SERVER )
 cd ~
 mkdir bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot
 cp -r hypixel-discord-chat-bridge/ bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot/
