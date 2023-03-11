@@ -47,7 +47,7 @@ mkdir bridges
 
 mkdir bridges/bridgebots
 
-cd hypixel-discord-chat-bridge/
+cd Hypixel-Chat-Bot/
 
 mv config.example.json config.json
 
