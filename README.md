@@ -30,7 +30,9 @@ If you have a new Ubuntu server, you will only need to use these steps once. Onc
 
 
 ## Setting Up New Server (Commands)
+These set of commands below **should only be used once per new server**, after you have done these the first time, you will never have to use them again on that server.
 
+```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
 source ~/.bashrc
@@ -52,10 +54,14 @@ cd Hypixel-Chat-Bot/
 mv config.example.json config.json
 
 npm install -g yarn
+```
 
 yarn
 
-## Creating A New Bridge Bot ( RUN SETTING UP A NEW SERVER COMMANDS IF IT IS A FRESH SERVER )
+## Creating A New Bridge Bot
+Once you have setup your server with the section above, you can use these commands below to set up multiple bridge bots on the same server. If you are setting up multiple, make sure to use all the commands in order after every new one.
+
+```sh
 cd ~
 
 mkdir bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot
@@ -67,6 +73,7 @@ cd bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot/Hypixel-Chat-Bot/
 nano config.json (edit this with correct info)
 
 pm2 start index.js --name NAMEOFBRIDGE-BridgeBot
+```
 
 
 
@@ -93,6 +100,13 @@ pm2 start index.js --name NAMEOFBRIDGE-BridgeBot
   - Add commands for players to use ingame to check other player stats (eg `!skills <ign>`, `!weight <ign>` etc)
 - [ ] Add support for officer chat
   - Allocate a second discord channel to use for two way officer chat.
+- [ ] Make it easier to setup
+
+### Change Log
+#### March 19th:
+   - Added Blacklisted words
+   - Fixed limbo message
+   - Added tutorial to update bridge bot
 
 ## License
 
