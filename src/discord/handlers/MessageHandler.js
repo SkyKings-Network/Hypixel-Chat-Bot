@@ -18,11 +18,32 @@ class MessageHandler {
       return
     }
 
+    if (this.isBlacklistedWord(message.content)) {
+      this.discord.client.channels.fetch(this.discord.app.config.discord.channel).then(channel => {
+        channel.send({
+          embed: {
+            author: { name: `Do not send that profanity!` },
+            color: 'FF0000'
+          }
+        })
+      })
+      return
+    }
+
     this.discord.broadcastMessage({
       username: message.member.displayName,
       message: this.stripDiscordContent(message.content),
       replyingTo: await this.fetchReply(message),
     })
+  }
+
+  isBlacklistedWord(message) {
+    const blacklistedWords = this.discord.app.config.discord.blacklistedWords;
+    for (var i = 0; i < blacklistedWords.length; i++) { 
+      if (message.includes(blacklistedWords[i])) {
+        return true
+      };
+    };
   }
 
   async fetchReply(message) {

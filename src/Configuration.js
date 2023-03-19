@@ -20,7 +20,16 @@ class Configuration {
       prefix: '!',
       messageMode: 'bot',
       autoAccept: false,
-      weightRequirements: 0
+      weightRequirements: 0,
+      blacklistedWords: ["nigger", "negro", "cunt", "faggot", "bitch", "fuck", "gay", "fag", "shit", "slag", "slut", "hitler", "nazi", 'dick', 'ch1t', 
+                          'd1ck', 'dik', 'dic', 'd1c', 'azz', 'c0ck', 'cock', 'penis', 'vagina', 'vegina', 'vejina', 'vajina', 'muzerfucer', 'motherfucker', 
+                          'kock', 'koc', 'k0ck', 'f0k', 'fock', 'fok', 'foc', 'kys', 'fuck', 'cunt', 'cvnt', 'dickhead', 'asshole', 'arsehole', 'fuckhead', 
+                          'fag', 'fags', 'faggot', 'faggots', 'feggit', 'feggits', 'faggit', 'faggits', 'cunts', 'kkk', 'whore', 'whores', 'slut', 'sluts', 
+                          'cunt', 'cunts', 'dickhead', 'dickheads', 'fucktard', 'fucker', 'fvcker', 'fuckerrs', 'fvckers', 'fckkers', 'fucking', 'fvcking', 
+                          'shit', 'shart', 'shite', 'whalecum', 'pussy', 'cock', 'dick', 'twat', 'hump', 'whitey', 'redneck', 'rednecks', 'chingchong', 'darky', 
+                          'darkey', 'darkie', 'darkies', 'darkys', 'darkeys', 'redskin', 'redskins', 'squinty', 'tacohead', 'anal', 'bastard', 'blowjob', 'boner', 
+                          'boob', 'boobs', 'boobies', 'boobeez', 'boobiez', 'boobz', 'tit', 'tits', 'titties', 'dildo', 'vagina', 'whore', 'cum', 'heil', 'sex', 
+                          'piss', 'bitch', 'fap', 'rape', 'raped', 'kekma']
     },
     express: {
       enabled: false,
