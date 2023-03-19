@@ -1,3 +1,4 @@
+// Test
 const EventHandler = require('../../contracts/EventHandler')
 class StateHandler extends EventHandler {
   constructor(minecraft, command) {
