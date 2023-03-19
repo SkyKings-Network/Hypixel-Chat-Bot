@@ -64,6 +64,7 @@ yarn
 Once you have setup your server with the section above, you can use these commands below to set up multiple bridge bots on the same server. If you are setting up multiple, make sure to use all the commands in order after every new one. Now you can paste these line by line into your Ubuntu server.
 
 Note: **Make sure to remove any <> where stated, as they are just placeholders to tell you what to change.**
+
 ```sh
 cd ~
 
