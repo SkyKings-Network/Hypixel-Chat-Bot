@@ -25,7 +25,7 @@ class StateHandler extends EventHandler {
 
       if (this.isLobbyJoinMessage(message)) {
         this.minecraft.app.log.minecraft('Sending Minecraft client to limbo')
-        return this.bot.chat('/ac §')
+        return this.bot.chat('§')
       }
 
       if (this.isFullMessage(message)) {
