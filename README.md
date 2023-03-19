@@ -105,10 +105,6 @@ pm2 restart NAMEOFBRIDGE-BridgeBot
 
 ### Roadmap
 
-- [ ] Chat message filter
-  - The filter should block any messages sent from Discord to Hypixel that contains banable words, and words that could potentially cause a mute.
-- [ ] Log guild events
-  - Guild joins/leaves/kicks, mutes/unmutes and promotion/demotions
 - [ ] Ingame commands
   - Add commands for players to use ingame to check other player stats (eg `!skills <ign>`, `!weight <ign>` etc)
 - [ ] Add support for officer chat
