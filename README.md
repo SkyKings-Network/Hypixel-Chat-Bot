@@ -1,34 +1,40 @@
-[Discord Support](discord.gg/skykings) | [Youtube Video](https://www.youtube.com/watch?v=HJZCP0aqwOQ)
+
 
 # Hypixel Discord Chat Bridge
 
-A two-way chat bridge between [Hypixel](https://hypixel.net/) guild chat and a [Discord](https://discord.com/) channel. The application utilizes [Discord.js-light](https://github.com/timotejroiko/discord.js-light) for communicating with Discord, and [Mineflayer](https://github.com/PrismarineJS/mineflayer) for communicating with Hypixel.
+<p align="center"> A two way chat bridge between your discord and ingame guild chat! </p>
 
-> This application will login to Hypixel using Mineflayer which is not a normal Minecraft client, this could result in your Minecraft account getting banned from Hypixel, so use this application at your own risk.
+[Discord Support](discord.gg/skykings) | [Youtube Video](https://www.youtube.com/watch?v=HJZCP0aqwOQ)
 
 <hr>
 
-## Table of Content
+## 🤖 Bot Features
+### 😎 Current!
+• Sends chat messages from ingame guild chat to a discord channel, and vise versa
+• Blacklisted words
+• !help - Shows a help menu with all commands
+• !online - Shows all online guild members
+• !list - Shows all guild members
+• !invite - Invites a member to the guild (staff only command)
+• !kick (username) - Kicks the specified member (staff only command)
+• !mute - Mutes the specified member (staff only command)
+• !promote (username) - Promotes the specified user up 1 rank
+• !notifications - Enables/Disables guild join/leave notifications (staff only command)
+• !relog - Relogs the bridge bot incase it logs out (staff only command)
 
-- [How To Setup](#installation-using-nodejs)
-- [Configuration](#configuration)
-- [Roadmap](#roadmap)
+### 📝 Planned...
+• Ingame commands ('!skill <ign>', '!weight <ign>', '!networth <ign>', etc)
+• Officer chat support
+• 
 
-## Installation using NodeJS
+## 💻 Setup Guide
 
 ### Prerequisites
 
-- Hosting
+- Hosting (w/ Ubuntu)
 - A Minecraft account
 
-### Setup Guide
-This setup guide is for any hosting server using Ubuntu. Check the above video to see how to set one up.
-
-This setup will allow you to run multiple bridge bots on the same server.
-
-Once you have a fresh Ubuntu server, run these commands in order.
-
-If you have a new Ubuntu server, you will only need to use these steps once. Once you have done these starting commands, you can move onto the next steps.
+This setup guide is for any hosting server using Ubuntu. Check the above video to see how to set one up. This will allow you to run multiple bridge bots on the same server. Once you have a fresh Ununtu server, you can start by running all of these commands in order. If you have a new Ubuntu server, you will only need to use these steps once. Once you have done these starting commands, you can move onto the next steps.
 
 
 ## Setting Up New Server (Commands)
@@ -90,26 +96,6 @@ git pull
 pm2 restart NAMEOFBRIDGE-BridgeBot
 ```
 
-### Commands
-
-`< >` = Required arguments, `[ ]` Optional arguments
-
-- `!help` - Displays the list of commands (`!h`)
-- `!relog` - Relogs the MC client, a delay can be given in seconds, if no delay is given it will default to 5 seconds (`!r`)
-- `!override <command> [args]` - Executes the string attached. This is a dangerous permission to grant (`!o`, `!or`)
-- `!invite <player>` - Invites the specified user to the guild, providing the guild isn't full (`!i`, `!inv`)
-- `!kick <user> [reason]` - Kicks the specified user from the guild (`!k`)
-- `!promote <user>` - Promotes the specified user by 1 rank (`!p`, `!up`)
-- `!demote <user>` - Demotes the specified user by 1 rank (`!d`, `!down`)
-- `!online` - Shows the online users
-
-### Roadmap
-
-- [ ] Ingame commands
-  - Add commands for players to use ingame to check other player stats (eg `!skills <ign>`, `!weight <ign>` etc)
-- [ ] Add support for officer chat
-  - Allocate a second discord channel to use for two way officer chat.
-- [ ] Make it easier to setup
 
 ### Change Log
 #### March 19th:
