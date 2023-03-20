@@ -1,10 +1,10 @@
 
 
-<p align="center"> # Hypixel Discord Chat Bridge </p>
+<h align="center"> Hypixel Discord Chat Bridge </p>
 
 <p align="center"> A two way chat bridge between your discord and ingame guild chat! </p>
 
-<p align="center"> [Discord Support](discord.gg/skykings) | [Youtube Video](https://www.youtube.com/watch?v=HJZCP0aqwOQ) </p>
+<p align="center"> <a href="discord.gg/skykings">Discord Support<a> | <a href="https://www.youtube.com/watch?v=HJZCP0aqwOQ">Youtube Video<a> </p>
 
 <hr>
 
@@ -12,6 +12,7 @@
 ### 😎 Current!
 • Sends chat messages from ingame guild chat to a discord channel, and vise versa  
 • Blacklisted words  
+• Auto accept guild join requests  
 • !help - Shows a help menu with all commands  
 • !online - Shows all online guild members  
 • !list - Shows all guild members  
@@ -23,8 +24,10 @@
 • !relog - Relogs the bridge bot incase it logs out (staff only command)  
 
 ### 📝 Planned...
-• Ingame commands ('!skill <ign>', '!weight <ign>', '!networth <ign>', etc)  
+• Ingame commands (!skill ign, !weight ign, !networth ign, etc)  
 • Officer chat support  
+• Different text styles  
+• Add weight requirements for auto join  
 
 ## 💻 Setup Guide
 

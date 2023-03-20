@@ -22,7 +22,7 @@ class Configuration {
       autoAccept: false,
       weightRequirements: 0,
       blacklistedWords: ["nigger", "negro", "cunt", "faggot", "bitch", "fuck", "gay", "fag", "shit", "slag", "slut", "hitler", "nazi", 'dick', 'ch1t', 
-                          'd1ck', 'dik', 'dic', 'd1c', 'azz', 'c0ck', 'cock', 'penis', 'vagina', 'vegina', 'vejina', 'vajina', 'muzerfucer', 'motherfucker', 
+                          'd1ck', 'dik', 'd1c', 'dichead', 'azz', 'c0ck', 'cock', 'penis', 'vagina', 'vegina', 'vejina', 'vajina', 'muzerfucer', 'motherfucker', 
                           'kock', 'koc', 'k0ck', 'f0k', 'fock', 'fok', 'foc', 'kys', 'fuck', 'cunt', 'cvnt', 'dickhead', 'asshole', 'arsehole', 'fuckhead', 
                           'fag', 'fags', 'faggot', 'faggots', 'feggit', 'feggits', 'faggit', 'faggits', 'cunts', 'kkk', 'whore', 'whores', 'slut', 'sluts', 
                           'cunt', 'cunts', 'dickhead', 'dickheads', 'fucktard', 'fucker', 'fvcker', 'fuckerrs', 'fvckers', 'fckkers', 'fucking', 'fvcking', 
