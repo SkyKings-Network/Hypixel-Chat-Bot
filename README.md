@@ -1,31 +1,30 @@
 
 
-# Hypixel Discord Chat Bridge
+<p align="center"> # Hypixel Discord Chat Bridge </p>
 
 <p align="center"> A two way chat bridge between your discord and ingame guild chat! </p>
 
-[Discord Support](discord.gg/skykings) | [Youtube Video](https://www.youtube.com/watch?v=HJZCP0aqwOQ)
+<p align="center"> [Discord Support](discord.gg/skykings) | [Youtube Video](https://www.youtube.com/watch?v=HJZCP0aqwOQ) </p>
 
 <hr>
 
 ## 🤖 Bot Features
 ### 😎 Current!
-• Sends chat messages from ingame guild chat to a discord channel, and vise versa
-• Blacklisted words
-• !help - Shows a help menu with all commands
-• !online - Shows all online guild members
-• !list - Shows all guild members
-• !invite - Invites a member to the guild (staff only command)
-• !kick (username) - Kicks the specified member (staff only command)
-• !mute - Mutes the specified member (staff only command)
-• !promote (username) - Promotes the specified user up 1 rank
-• !notifications - Enables/Disables guild join/leave notifications (staff only command)
-• !relog - Relogs the bridge bot incase it logs out (staff only command)
+• Sends chat messages from ingame guild chat to a discord channel, and vise versa  
+• Blacklisted words  
+• !help - Shows a help menu with all commands  
+• !online - Shows all online guild members  
+• !list - Shows all guild members  
+• !invite - Invites a member to the guild (staff only command)  
+• !kick (username) - Kicks the specified member (staff only command)  
+• !mute - Mutes the specified member (staff only command)  
+• !promote (username) - Promotes the specified user up 1 rank  
+• !notifications - Enables/Disables guild join/leave notifications (staff only command)  
+• !relog - Relogs the bridge bot incase it logs out (staff only command)  
 
 ### 📝 Planned...
-• Ingame commands ('!skill <ign>', '!weight <ign>', '!networth <ign>', etc)
-• Officer chat support
-• 
+• Ingame commands ('!skill <ign>', '!weight <ign>', '!networth <ign>', etc)  
+• Officer chat support  
 
 ## 💻 Setup Guide
 
