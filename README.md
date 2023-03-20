@@ -1,6 +1,6 @@
 
 
-<h align="center"> Hypixel Discord Chat Bridge </p>
+# Hypixel Discord Chat Bridge
 
 <p align="center"> A two way chat bridge between your discord and ingame guild chat! </p>
 
@@ -99,11 +99,11 @@ pm2 restart NAMEOFBRIDGE-BridgeBot
 ```
 
 
-### Change Log
-#### March 19th:
-   - Added Blacklisted words
-   - Fixed limbo message
-   - Added tutorial to update bridge bot
+## Change Log
+### March 19th:
+   • Added Blacklisted words  
+   • Fixed limbo message  
+   • Added tutorial to update bridge bot  
 
 ## License
 
