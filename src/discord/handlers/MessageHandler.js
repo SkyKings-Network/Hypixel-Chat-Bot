@@ -59,6 +59,15 @@ class MessageHandler {
       };
     };
   }
+  
+  isBlacklistedPlayer(name) {
+    const blacklistedPlayers = this.discord.app.config.discord.blacklistedPlayers;
+    for (var i = 0; i < blacklistedPlayers.length; i++) {
+      if (message.author.name in blacklistedPlayers[i]) {
+        return true
+      };
+    };
+  }
 
   async fetchReply(message) {
     try {
