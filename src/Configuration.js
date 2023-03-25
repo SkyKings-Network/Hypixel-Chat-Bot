@@ -29,7 +29,8 @@ class Configuration {
                           'shit', 'shart', 'shite', 'whalecum', 'pussy', 'cock', 'dick', 'twat', 'hump', 'whitey', 'redneck', 'rednecks', 'chingchong', 'darky', 
                           'darkey', 'darkie', 'darkies', 'darkys', 'darkeys', 'redskin', 'redskins', 'squinty', 'tacohead', 'anal', 'bastard', 'blowjob', 'boner', 
                           'boob', 'boobs', 'boobies', 'boobeez', 'boobiez', 'boobz', 'tit', 'tits', 'titties', 'dildo', 'vagina', 'whore', 'cum', 'heil', 'sex', 
-                          'piss', 'bitch', 'fap', 'rape', 'raped', 'kekma']
+                          'piss', 'bitch', 'fap', 'rape', 'raped', 'kekma'],
+      blacklistedPlayers: []
     },
     express: {
       enabled: false,
