@@ -213,8 +213,8 @@ class StateHandler extends EventHandler {
           const blacklistedPlayers = this.discord.app.config.discord.blacklistedWords
             
           if (blacklistedPlayers.includes(user)) {
-              this.bot.chat(`/msg ${user} You are blacklisted from joining SkyKings guilds!`);
-            }
+            this.bot.chat(`/msg ${user} You are blacklisted from joining SkyKings guilds!`);
+          } else {
             this.bot.chat(`/g accept ${user}`)
           }
           return this.minecraft.broadcastCleanEmbed({ message: `${user} has requested to join the guild.`, color: '47F049' })
