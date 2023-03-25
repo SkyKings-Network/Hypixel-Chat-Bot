@@ -210,13 +210,12 @@ class StateHandler extends EventHandler {
           user = user.replace('-----------------------------------------------------', '')
           user = user.replace('\n', '')
           if (config.discord.autoAccept===true){  
-          const blacklistedPlayers = config.discord.blacklistedPlayers
-            
-          if (blacklistedPlayers.includes(user)) {
-            this.bot.chat(`/msg ${user} You are blacklisted from joining SkyKings guilds!`);
-          } else {
-            this.bot.chat(`/g accept ${user}`)
-          }
+            const blacklistedPlayers = config.discord.blacklistedPlayers
+            if (blacklistedPlayers.includes(user)) {
+              this.bot.chat(`/msg ${user} You are blacklisted from joining SkyKings guilds!`);
+            } else {
+              this.bot.chat(`/g accept ${user}`)
+            }
           return this.minecraft.broadcastCleanEmbed({ message: `${user} has requested to join the guild.`, color: '47F049' })
 
           
@@ -224,9 +223,14 @@ class StateHandler extends EventHandler {
           let user = message.split(' ')[0]
           user = user.replace('-----------------------------------------------------', '')
           user = user.replace('\n', '')
-          if (config.discord.autoAccept===true){
-            this.bot.chat(`/g accept ${user}`)
-          }
+          if (config.discord.autoAccept===true){  
+            const blacklistedPlayers = config.discord.blacklistedPlayers
+            if (blacklistedPlayers.includes(user)) {
+              this.bot.chat(`/msg ${user} You are blacklisted from joining SkyKings guilds!`);
+            } else {
+              this.bot.chat(`/g accept ${user}`)
+            }
+
 
           return this.minecraft.broadcastCleanEmbed({ message: `${user} has requested to join the guild.`, color: '47F049' })
         }
