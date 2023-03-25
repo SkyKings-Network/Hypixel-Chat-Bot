@@ -29,6 +29,20 @@ class MessageHandler {
       })
       return
     }
+    
+    if (this.isBlacklistedPlayer(message.author.name)) {
+      this.discord.client.channels.fetch(this.discord.app.config.discord.channel).then(channel => {
+        channel.send({
+          embed: {
+            author: { name: `You are not allowed to send messages!` },
+            color: 'FF0000'
+          }
+        })
+      })
+      return
+    }
+    
+    
 
     this.discord.broadcastMessage({
       username: message.member.displayName,
