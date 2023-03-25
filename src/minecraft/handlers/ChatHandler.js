@@ -210,7 +210,7 @@ class StateHandler extends EventHandler {
           user = user.replace('-----------------------------------------------------', '')
           user = user.replace('\n', '')
           if (config.discord.autoAccept===true){  
-          const blacklistedPlayers = config.discord.blacklistedWords
+          const blacklistedPlayers = config.discord.blacklistedPlayers
             
           if (blacklistedPlayers.includes(user)) {
             this.bot.chat(`/msg ${user} You are blacklisted from joining SkyKings guilds!`);
