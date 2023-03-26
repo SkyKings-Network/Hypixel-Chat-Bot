@@ -212,7 +212,7 @@ class StateHandler extends EventHandler {
           if (config.discord.autoAccept===true){  
             const blacklistedPlayers = config.discord.blacklistedPlayers
             if (blacklistedPlayers.includes(user)) {
-              this.bot.chat(`/msg ${user} You are blacklisted from joining SkyKings guilds!`);
+              return;
             } else {
               this.bot.chat(`/g accept ${user}`)
             }
@@ -226,7 +226,7 @@ class StateHandler extends EventHandler {
           if (config.discord.autoAccept===true){  
             const blacklistedPlayers = config.discord.blacklistedPlayers
             if (blacklistedPlayers.includes(user)) {
-              this.bot.chat(`/msg ${user} You are blacklisted from joining SkyKings guilds!`);
+              return;
             } else {
               this.bot.chat(`/g accept ${user}`)
             }
