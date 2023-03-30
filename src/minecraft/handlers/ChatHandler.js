@@ -206,29 +206,17 @@ class StateHandler extends EventHandler {
         let config = JSON.parse(rawdata);
 
         if (message.includes("[VIP]") || message.includes("[VIP+]") || message.includes("[MVP]") || message.includes("[MVP+]") || message.includes("[MVP++]")) {
-          let user = message.split(' ')[1]
-          user = user.replace('-----------------------------------------------------', '')
-          user = user.replace('\n', '')
-          if (config.discord.autoAccept===true){
-            this.bot.chat(`/g accept ${user}`)
-          }
-          return this.minecraft.broadcastCleanEmbed({ message: `${user} has requested to join the guild.`, color: '47F049' })
-
-          
+          let user = message.split(' ')[1];
         } else {
-          let user = message.split(' ')[0]
-          user = user.replace('-----------------------------------------------------', '')
-          user = user.replace('\n', '')
-          if (config.discord.autoAccept===true){
-            this.bot.chat(`/g accept ${user}`)
-          }
-
-          return this.minecraft.broadcastCleanEmbed({ message: `${user} has requested to join the guild.`, color: '47F049' })
+          let user = message.split(' ')[0];
         }
-
+        user = user.replace('-----------------------------------------------------', '')
+        user = user.replace('\n', '')
+        if (config.discord.autoAccept===true){
+          this.bot.chat(`/g accept ${user}`)
+        }
         
-        
-        
+        return this.minecraft.broadcastCleanEmbed({ message: `${user} has requested to join the guild.`, color: '47F049' })
       }
 
       if (!this.isGuildMessage(message)) {
