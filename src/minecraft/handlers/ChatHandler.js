@@ -213,7 +213,12 @@ class StateHandler extends EventHandler {
         user = user.replace('-----------------------------------------------------', '')
         user = user.replace('\n', '')
         if (config.discord.autoAccept===true){
-          this.bot.chat(`/g accept ${user}`)
+          const blacklistedPlayers = config.discord.blacklistedPlayers
+          if (blacklistedPlayers.includes(user)) {
+              return;
+          } else {
+            this.bot.chat(`/g accept ${user}`)
+          }
         }
         
         return this.minecraft.broadcastCleanEmbed({ message: `${user} has requested to join the guild.`, color: '47F049' })
