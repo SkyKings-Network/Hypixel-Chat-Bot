@@ -31,6 +31,8 @@
 
 ## 💻 Setup Guide
 
+https://www.youtube.com/watch?v=HJZCP0aqwOQ
+
 ### Prerequisites
 
 - Hosting (w/ Ubuntu)
