@@ -130,7 +130,7 @@ class ExpressManager {
         })
       }
 
-      return response.status(409).json({
+      return response.status(503).json({
         success: false,
         reason: 'Minecraft client is unavailable at this time'
       })
@@ -154,7 +154,7 @@ class ExpressManager {
         })
       }
 
-      return response.status(409).json({
+      return response.status(503).json({
         success: false,
         reason: 'Minecraft client is unavailable at this time'
       })
@@ -178,7 +178,7 @@ class ExpressManager {
         })
       }
 
-      return response.status(409).json({
+      return response.status(503).json({
         success: false,
         reason: 'Minecraft client is unavailable at this time'
       })
@@ -202,7 +202,7 @@ class ExpressManager {
         })
       }
 
-      return response.status(409).json({
+      return response.status(503).json({
         success: false,
         reason: 'Minecraft client is unavailable at this time'
       })
@@ -225,7 +225,7 @@ class ExpressManager {
         })
       }
 
-      return response.status(409).json({
+      return response.status(503).json({
         success: false,
         reason: 'Minecraft client is unavailable at this time'
       })
@@ -249,7 +249,7 @@ class ExpressManager {
         })
       }
 
-      return response.status(409).json({
+      return response.status(503).json({
         success: false,
         reason: 'Minecraft client is unavailable at this time'
       })
@@ -273,7 +273,7 @@ class ExpressManager {
         })
       }
 
-      return response.status(409).json({
+      return response.status(503).json({
         success: false,
         reason: 'Minecraft client is unavailable at this time'
       })
@@ -297,7 +297,7 @@ class ExpressManager {
         })
       }
 
-      return response.status(409).json({
+      return response.status(503).json({
         success: false,
         reason: 'Minecraft client is unavailable at this time'
       })
