@@ -7,7 +7,7 @@
     "username": "yourUsername",
     "password": "yourPassword",
     "lobbyHolder": "ignUsername",
-    "accountType": "mojang"
+    "accountType": "microsoft"
   },
   "discord": {
     "token": "discordBotToken",
