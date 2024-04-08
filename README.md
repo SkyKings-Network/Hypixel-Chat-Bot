@@ -93,12 +93,20 @@ pm2 start index.js --name NAMEOFBRIDGE-BridgeBot
 If we make a update to the code, you will have to update the code manually for each bridge bot, to do this you can use the commands below **for each individual bridge bot**.
 
 ```sh
+
+npm update --save
+
 cd bridges/bridgebots/<NAME_OF_GUILD>-Bridgebot/Hypixel-Chat-Bot/
 
 git pull
 
 pm2 restart NAMEOFBRIDGE-BridgeBot
 ```
+
+## How To Fix A Bridge Bot
+If you are having trouble with your bridge bot, you should try updating it with the "How To Update A Bridge Bot" instructions above.
+
+If the bot is still not working, feel free to join our discord linked at the top of this page and open a support ticket!
 
 
 ## Change Log

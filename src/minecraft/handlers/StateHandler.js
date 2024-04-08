@@ -20,10 +20,10 @@ class StateHandler extends EventHandler {
   onLogin() {
     this.minecraft.app.log.minecraft('Client ready, logged in as ' + this.bot.username)
 
-    console.log(this.bot.chatPatterns); 
-    this.bot.chatPatterns.pop();
-    this.bot.chatPatterns.pop();
-    this.bot.chatPatterns.pop();
+    // console.log(this.bot.chatPatterns); 
+    // this.bot.chatPatterns.pop();
+    // this.bot.chatPatterns.pop();
+    // this.bot.chatPatterns.pop();
 
     this.loginAttempts = 0
     this.exactDelay = 0
