@@ -1,3 +1,13 @@
+# ⚠️⚠️⚠️ NOTICE: NEW BRIDGE BOT ⚠️⚠️⚠️
+We have recently recoded the entire bot to make it much better, so please use the github link below instead of this repository.
+
+The new repository also has the clear instructions to run it on the server of your choice :))
+
+https://github.com/SkyKings-Network/GuildBridgeBot
+
+
+
+
 
 
 # Hypixel Discord Chat Bridge
